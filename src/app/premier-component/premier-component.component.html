@@ -1,0 +1,40 @@
+<p> <h2 *ngIf="prenom == 'Stéphane'"> Bonjour {{ prenom |uppercase }} </h2>
+  <button (click)="displayButton=!displayButton">btn</button>
+  <!-- utilisation de directive de structure  -->
+  <p *ngIf="displayButton" > test du click </p>
+  <ul>
+    <li *ngFor="let user of users; let i = index"> {{ i + 1}} - {{user.nom}}</li>
+  </ul>
+  <!-- utilisation de directive d'attribut  -->
+
+<div [ngStyle]="{width: '10em',
+height: '5em',
+backgroundColor: 'blue'}"></div>
+
+<!-- utilisation d'une directive -->
+<!-- <input type="text" name="color" [(ngModel)] = 'color'>
+<div [ngStyle]="{width: '10em',
+height: '5em',
+backgroundColor: color}"></div> -->
+
+<!-- utilisation de la directive [(ngClass)] avec -->
+<input type="text" [(ngModel)]='color'>
+
+<div class="square" [ngClass]="{
+  bluesquare: color === 'blue',
+yellowsquare: color === 'yellow'}" ></div>
+
+<p> au jourd'hui est le {{ today |date }}</p>
+
+<p> au jourd'hui est le {{ today |date }} et l'heure est  </p>
+
+<p>{{username}}</p>
+<p>{{today | date}}</p>
+<p>{{hour}}</p>
+
+<!--  arrondir les chiffres -->
+<p> {{ 344.36| currency EUR }}</p>
+
+
+
+
